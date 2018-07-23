@@ -1,0 +1,117 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	outline: none;
+	text-decoration: none;
+	font-family: regular;
+}
+@font-face {
+    font-family: regular;
+    src: url(../fonts/bpgNinoMtavruliNormal.woff);
+}
+
+.row{
+	margin-bottom: 0px;
+}
+input:not([type]), 
+input[type=text]:not(.browser-default), 
+input[type=password]:not(.browser-default), 
+input[type=email]:not(.browser-default), 
+input[type=url]:not(.browser-default), 
+input[type=time]:not(.browser-default), 
+input[type=date]:not(.browser-default), 
+input[type=datetime]:not(.browser-default), 
+input[type=datetime-local]:not(.browser-default), 
+input[type=tel]:not(.browser-default), 
+input[type=number]:not(.browser-default), 
+input[type=search]:not(.browser-default), 
+textarea.materialize-textarea {
+	border-bottom: 1px solid $formColor;
+}
+input:not([type]):focus:not([readonly]), 
+input[type=text]:not(.browser-default):focus:not([readonly]), 
+input[type=password]:not(.browser-default):focus:not([readonly]), 
+input[type=email]:not(.browser-default):focus:not([readonly]), 
+input[type=url]:not(.browser-default):focus:not([readonly]), 
+input[type=time]:not(.browser-default):focus:not([readonly]), 
+input[type=date]:not(.browser-default):focus:not([readonly]), 
+input[type=datetime]:not(.browser-default):focus:not([readonly]), 
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]), 
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]), 
+input[type=search]:not(.browser-default):focus:not([readonly]), 
+textarea.materialize-textarea:focus:not([readonly]){
+	border-bottom: 1px solid $formColor;
+    -webkit-box-shadow: 0 1px 0 0 $formColor;
+    box-shadow: 0 1px 0 0 $formColor;
+}
+input:not([type]):focus:not([readonly])+label, 
+input[type=text]:not(.browser-default):focus:not([readonly])+label, 
+input[type=password]:not(.browser-default):focus:not([readonly])+label, 
+input[type=email]:not(.browser-default):focus:not([readonly])+label, 
+input[type=url]:not(.browser-default):focus:not([readonly])+label, 
+input[type=time]:not(.browser-default):focus:not([readonly])+label, 
+input[type=date]:not(.browser-default):focus:not([readonly])+label, 
+input[type=datetime]:not(.browser-default):focus:not([readonly])+label, 
+input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, 
+input[type=tel]:not(.browser-default):focus:not([readonly])+label,
+input[type=number]:not(.browser-default):focus:not([readonly])+label, 
+input[type=search]:not(.browser-default):focus:not([readonly])+label, 
+textarea.materialize-textarea:focus:not([readonly])+label{
+	color: $formColor;
+}
+
+
+.input-field{
+	margin-bottom: 0;
+}
+.btn{
+	background: $btnColor;
+	border-radius: 15px;
+	padding: 0px 15px;
+    font-size: 15px;
+    font-family: regular;
+    box-shadow: none;
+	height: 30px;
+    line-height: 34px;
+}
+.btn:hover{
+	background-color: rgba(79, 43, 165, 0.68);
+}
+
+.select-wrapper input.select-dropdown{
+    border: none;
+    width: 56px;
+    text-transform: uppercase;
+    color: $menuTextCol;
+    padding: 0 15px;
+}
+.select-wrapper .caret{
+	right: 14px;
+    top: 2px;
+}
+.select-wrapper input.select-dropdown:focus{
+	border-bottom: none;
+}
+.dropdown-content li>a, 
+.dropdown-content li>span{
+	color: $lineColor;	
+}
+.m-0{
+	margin: 0!important;
+}
+.p-0{
+	padding: 0!important;
+}
+.full-width{
+	width: 100%;
+    margin: 0;
+    max-width: 100%;
+}
+.pos-rel{
+	position: relative;
+}
+.pos-abs{
+	position: absolute;
+}

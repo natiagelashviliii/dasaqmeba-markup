@@ -1,0 +1,28 @@
+@mixin mq($size) {
+	@media only screen and (max-width: $size){
+		@content
+	}
+}
+@mixin form-fields{
+	.input-field{
+		input{
+			width: 100%;
+		}
+		&>label{
+			color: rgba(246, 240, 255, 0.74);
+			font-size: 14px;
+		}
+	}
+}
+
+@mixin gradient-img{
+	top: -45px;
+	width: 50%;
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin vh-100{
+	min-height: calc(100vh - 85px);
+}

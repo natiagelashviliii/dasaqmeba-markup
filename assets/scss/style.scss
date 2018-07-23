@@ -1,0 +1,162 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "normilize.scss";
+
+main{
+	@include vh-100;
+	&.bg-gradient{
+		background: linear-gradient(to right, #6369d7, #9767cb);
+	}
+}
+header{
+	&.navbar-fixed{
+		height: 85px;
+	}
+	nav{
+		background-color: $backColor;
+		box-shadow: none;
+		border-bottom: 1px solid $lineColor;
+		height: 85px;
+		line-height: 85px;
+		.logo{
+			width: 55px;
+			height: 55px;
+			display: inline-block;
+			background: #331e51;
+			margin: 15px 0 0 15px;
+		}
+		ul{
+			.languages{
+				margin-top: 15px;
+			}
+			li{
+				a{
+					color: $menuTextCol;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+.login-wrapper{
+	@include vh-100;
+	img{
+		@include gradient-img;
+	    &#img-binoculars{
+	    	top: 20px!important;
+	    }
+	}
+	.tabs{
+		background: transparent;
+		&.login-registration-tabs{
+			margin-top: 16%;
+			li{
+				a{
+					color: white;
+					font-size: 20px;
+					padding: 0;
+					&.active{
+						color: white;
+						background-color: transparent!important;
+					}
+					&:hover{
+						color: white!important;
+					}
+				}
+			}
+			.indicator{
+				background-color: $blueLine;
+			}
+		}
+		&.registration-types{
+			margin-top: 15px;
+			text-align: center;
+			li{
+				margin-right: 15px;
+				a{
+					color: rgba(246, 240, 255, 0.78);
+					font-size: 14px;
+					padding: 0;
+					&.active{
+						color: #331e51;
+					}
+					&:focus{
+						background-color: transparent!important;
+						color: #331e51;
+					}
+				}
+			}
+			.indicator{
+				display: none;
+			}
+		}
+	}
+	#login-form{
+		form{
+			margin-top: 15px;
+			@include form-fields;
+		}
+	}
+	#person-form{
+		form{
+			@include form-fields;
+		}
+	}
+	#company-form{
+		form{
+			@include form-fields;
+		}
+	}
+}
+
+
+.about-wrapper{
+	img{
+		width: 50%;
+	    margin-left: 50%;
+	    transform: translateX(-50%);
+	    margin-top: -15%;
+	}
+	.about-descr{
+		margin: 30px 0;
+		color: white;
+		text-align: justify;
+	}
+}
+
+.contact-wrapper{
+	.tape{
+		@include vh-100;
+		justify-content: center;
+		img{
+			width: 80%;
+		}
+	}
+	.contact{
+		@include vh-100;
+		justify-content: center;
+		form{
+			.input-field{
+				label{
+					color: $formColor;
+				}
+				textarea{
+					height: 150px;
+				}
+			}
+		}
+	}
+	.contact-info{
+		bottom: 15px;
+		left: 15px;
+		span{
+			color: $formColor;
+			margin-right: 15px;
+			font-size: 13px;
+			a{
+				color: $formColor;
+			}
+		}
+	}
+}
