@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$('select').formSelect();
 	$('.tabs').tabs({});
+	$('.datepicker').datepicker();
 
 	$('.login-registration-tabs li a').on('click', function(){
 		let id 		= $(this).attr('id');

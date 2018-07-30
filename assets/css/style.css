@@ -72,6 +72,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   -webkit-box-shadow: none;
   box-shadow: none;
   height: 30px;
+  font-size: 13px;
   line-height: 34px; }
 
 .btn:hover {
@@ -98,6 +99,9 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 .m-0 {
   margin: 0 !important; }
 
+.m-t-40 {
+  margin-top: 40px !important; }
+
 .p-0 {
   padding: 0 !important; }
 
@@ -111,6 +115,14 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 
 .pos-abs {
   position: absolute; }
+
+.btn:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+label {
+  color: #f6f0ff !important;
+  font-size: 13px !important; }
 
 main {
   min-height: calc(100vh - 85px); }
@@ -229,8 +241,6 @@ header nav {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  .contact-wrapper .contact form .input-field label {
-    color: #f6f0ff; }
   .contact-wrapper .contact form .input-field textarea {
     height: 150px; }
 
@@ -243,3 +253,30 @@ header nav {
     font-size: 13px; }
     .contact-wrapper .contact-info span a {
       color: #f6f0ff; }
+
+.profile-edit {
+  padding-top: 80px; }
+  .profile-edit .profile-img {
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    background: #331e51;
+    margin: 15px 0 0 15px;
+    margin: 0 0 15px 0; }
+  .profile-edit .row:first-child {
+    margin-bottom: 40px; }
+  .profile-edit .title {
+    display: block;
+    color: #f6f0ff; }
+    .profile-edit .title .pencil {
+      width: 12px;
+      margin-left: 5px; }
+    .profile-edit .title:hover {
+      color: #e7d9fd; }
+  .profile-edit form input {
+    color: #f6f0ff;
+    position: relative; }
+    .profile-edit form input:disabled {
+      border-bottom: 1px solid #f6f0ff !important; }
+    .profile-edit form input::after {
+      content: "* * *"; }

@@ -26,3 +26,15 @@
 @mixin vh-100{
 	min-height: calc(100vh - 85px);
 }
+
+@mixin logo{
+	width: 55px;
+	height: 55px;
+	display: inline-block;
+	background: #331e51;
+	margin: 15px 0 0 15px;
+}
+
+@mixin pencil{
+	width: 12px;
+}

@@ -19,11 +19,7 @@ header{
 		height: 85px;
 		line-height: 85px;
 		.logo{
-			width: 55px;
-			height: 55px;
-			display: inline-block;
-			background: #331e51;
-			margin: 15px 0 0 15px;
+			@include logo;
 		}
 		ul{
 			.languages{
@@ -138,9 +134,6 @@ header{
 		justify-content: center;
 		form{
 			.input-field{
-				label{
-					color: $formColor;
-				}
 				textarea{
 					height: 150px;
 				}
@@ -157,6 +150,43 @@ header{
 			a{
 				color: $formColor;
 			}
+		}
+	}
+}
+
+.profile-edit{
+	padding-top: 80px;
+	.profile-img{
+		@include logo;
+		margin: 0 0 15px 0;
+	}
+	.row{
+		&:first-child{
+			margin-bottom: 40px;
+		}
+	}
+	.title{
+		display: block;
+		color: $formColor;
+		.pencil{
+			@include pencil;
+			margin-left: 5px;
+		}
+
+		&:hover{
+			color: #e7d9fd;
+		}
+	}
+	form{
+		input{
+			color: $formColor;
+			&:disabled{
+				border-bottom: 1px solid $formColor!important;
+			}
+			position: relative;
+			&::after {
+		        content: "* * *";
+		    }
 		}
 	}
 }
