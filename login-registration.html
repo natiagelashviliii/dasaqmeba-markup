@@ -136,8 +136,7 @@
 					        	<label for="RepeatUserPassword">გაიმერორეთ პაროლი</label>
 					        </div>
 					        <div class="input-field col s12">
-					        	<button data-target="rules-modal" id="rules-modal-btn" class="waves-effect waves-light btn right modal-trigger">საიტის წესები და პირობები</button>
-					        	<button class="waves-effect waves-light btn right">დადასტურება</button>
+					        	<button class="waves-effect waves-light btn right modal-trigger" data-target="rules-modal" id="rules-modal-btn">დადასტურება</button>
 					        </div>
 					     </div>
 					</form>
@@ -180,7 +179,7 @@
 					        	<label for="RepeatCompPassword">გაიმეორეთ პაროლი</label>
 					        </div>
 					        <div class="input-field col s12">
-					        	<button class="waves-effect waves-light btn right">დადასტურება</button>
+					        	<button class="waves-effect waves-light btn right modal-trigger" data-target="rules-modal" id="rules-modal-btn">დადასტურება</button>
 					        </div>
 					     </div>
 					</form>
@@ -198,9 +197,9 @@
 <!-- rules modal start -->
 
 <div id="rules-modal" class="modal">
-	<div class="modal-content">
+	<div class="modal-content rules-modal-content">
 		<h4>წესები და პირობები</h4>
-		<div>
+		<div class="rules">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec leo diam, interdum ac tempor non, gravida at ex. Aenean a imperdiet turpis. Quisque in mattis felis, eleifend molestie massa. Aenean id arcu dui. Aenean a lorem elit. Etiam commodo, nibh et pharetra ornare, libero ipsum elementum ipsum, in iaculis nulla nibh nec lacus. Sed convallis semper eros, ac condimentum enim sollicitudin pulvinar. Sed cursus justo ipsum, quis commodo tellus tincidunt at. Maecenas tristique at diam et ornare. Mauris felis mi, molestie eu fermentum eu, convallis eget ex. Morbi id metus sit amet leo semper tincidunt sed a diam. Aliquam iaculis nulla non quam mattis, sed scelerisque neque pulvinar.
 
 			Curabitur eleifend fringilla leo, in imperdiet arcu consequat non. Donec ut est in nunc luctus accumsan. In lorem arcu, consequat non lorem non, molestie commodo tortor. Sed porttitor purus id suscipit rutrum. Proin tempus felis ut elementum suscipit. Praesent consectetur tortor consequat justo ultricies, laoreet venenatis ipsum luctus. Fusce justo eros, porttitor eu finibus sed, pellentesque vel ante. Duis nec massa id lectus ornare pellentesque at vitae sem. Nulla vehicula enim eget felis pulvinar, id blandit augue aliquet. Integer vulputate massa sit amet enim varius ultrices. Donec sagittis, nisi nec ornare cursus, lectus purus faucibus risus, id egestas risus neque sed ex. Pellentesque nec neque a mi lacinia euismod sed ac tortor.
@@ -220,7 +219,7 @@
 
 			Nam dictum est quis mauris blandit placerat. Vivamus vitae luctus augue. Praesent ante lacus, tristique quis laoreet fermentum, gravida ut dui. Pellentesque at dui nisl. Vestibulum a dapibus tellus, id hendrerit dui. Suspendisse tempor diam eget sapien scelerisque, et blandit libero convallis. Nullam et lacus viverra, molestie eros at, lacinia ante. Sed sollicitudin metus sed erat viverra consequat. Praesent quis maximus nunc. Sed imperdiet sem sed purus fermentum tempus. Aliquam a erat efficitur, consectetur purus ornare, cursus quam. Donec venenatis dui est, quis varius ipsum pretium ut. Pellentesque non velit id ipsum rutrum consectetur vitae sed purus. Etiam viverra dapibus ante sed aliquam. Aenean sem sem, vulputate et erat a, dapibus hendrerit nisi.
 			<p>
-				<a href="#!" class="modal-close waves-effect waves-green btn-flat btn rules-agree-btn right">ვეთანხმები</a>
+				<button disabled id="rules-agree-btn" class="modal-close waves-effect waves-green btn-flat btn rules-agree-btn right">ვეთანხმები</button>
 			</p>
 		</div>
 	</div>

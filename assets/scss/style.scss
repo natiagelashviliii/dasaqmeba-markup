@@ -4,8 +4,13 @@
 
 main{
 	@include vh-100;
+	position: relative;
+	transition: margin-left 0.5s ease;
 	&.bg-gradient{
 		background: linear-gradient(to right, #6369d7, #9767cb);
+	}
+	&.main-inside{
+		margin-left: 150px;
 	}
 }
 header{
@@ -18,9 +23,6 @@ header{
 		border-bottom: 1px solid $lineColor;
 		height: 85px;
 		line-height: 85px;
-		.nav-wrapper{
-			float: right;
-		}
 		.logo{
 			@include logo;
 			@include mq(992px){
@@ -28,14 +30,34 @@ header{
 				margin-right: 15px;
 			}
 		}
-		ul{
-			.languages{
-				margin-top: 15px;
+		.nav-wrapper{
+			float: right;
+			ul{
+				.languages{
+					margin-top: 15px;
+				}
+				li{
+					a{
+						color: $menuTextCol;
+						font-size: 18px;
+					}
+				}
 			}
-			li{
-				a{
-					color: $menuTextCol;
-					font-size: 18px;
+		}
+		.notifications{
+			&>ul{
+				li{
+					a{
+						&:hover{
+							background: transparent;
+						}
+						img{
+							width: 17px;
+							height: 85px;
+							display: block;
+							margin: 0 5px;
+						}
+					}
 				}
 			}
 		}
@@ -104,17 +126,13 @@ header{
 	#person-form{
 		form{
 			@include form-fields;
-			@include mq(992px){
-				margin-bottom: 30px;
-			}
+			margin-bottom: 30px;
 		}
 	}
 	#company-form{
 		form{
 			@include form-fields;
-			@include mq(992px){
-				margin-bottom: 30px;
-			}
+			margin-bottom: 30px;
 		}
 	}
 }
@@ -125,7 +143,7 @@ header{
 		padding: 45px;
 		div{
 			overflow: hidden;
-			height: 50vh;
+			height: 40vh;
 			overflow-y: scroll;
 			padding: 0 20px 0 0;
 			&::-webkit-scrollbar {
@@ -148,7 +166,6 @@ header{
 		color: white;
 	}
 }
-
 
 .about-wrapper{
 	img{
@@ -244,9 +261,51 @@ header{
 				border-bottom: 1px solid $formColor!important;
 			}
 			position: relative;
-			&::after {
-		        content: "* * *";
-		    }
+		}
+	}
+}
+
+
+.aside-menu{
+	position: fixed;
+	height: calc(100vh - 85px);
+	top: 85px;
+	width: 200px;
+	z-index: 100;
+	.aside-menu-btn{
+		top: calc((60px - 36px) / 2 );
+	    width: 36px;
+	    height: 36px;
+	    background: transparent url('../../assets/img/aside-menu.svg');
+	    border: none;
+	    cursor: pointer;
+	    position: absolute;
+	    left: 22px;
+	    transition: .5s ease;
+	    z-index: 10;
+	    &.active{
+	    	transform: rotate(-180deg);
+	    	left: 150px;
+	    }
+	    &.active + ul{
+	    	transform: translateX(0);
+	    }
+	}
+	ul{
+		background: #331e51;
+		height: 100%;
+		padding-top: 60px;
+		position: absolute;
+		transform: translateX(-100%);
+		width: 100%;
+		transition: 0.5s ease;
+		li{
+			a{
+				color: white;
+				display: block;
+			    width: 100%;
+			    padding: 10px 20px;
+			}
 		}
 	}
 }

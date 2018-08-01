@@ -249,12 +249,18 @@ label {
   margin-left: 5px; }
 
 main {
-  min-height: calc(100vh - 85px); }
+  min-height: calc(100vh - 85px);
+  position: relative;
+  -webkit-transition: margin-left 0.5s ease;
+  -o-transition: margin-left 0.5s ease;
+  transition: margin-left 0.5s ease; }
   main.bg-gradient {
     background: -webkit-gradient(linear, left top, right top, from(#6369d7), to(#9767cb));
     background: -webkit-linear-gradient(left, #6369d7, #9767cb);
     background: -o-linear-gradient(left, #6369d7, #9767cb);
     background: linear-gradient(to right, #6369d7, #9767cb); }
+  main.main-inside {
+    margin-left: 150px; }
 
 header.navbar-fixed {
   height: 85px; }
@@ -266,8 +272,6 @@ header nav {
   border-bottom: 1px solid rgba(40, 21, 62, 0.5);
   height: 85px;
   line-height: 85px; }
-  header nav .nav-wrapper {
-    float: right; }
   header nav .logo {
     width: 55px;
     height: 55px;
@@ -278,11 +282,20 @@ header nav {
       header nav .logo {
         float: right;
         margin-right: 15px; } }
-  header nav ul .languages {
-    margin-top: 15px; }
-  header nav ul li a {
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 18px; }
+  header nav .nav-wrapper {
+    float: right; }
+    header nav .nav-wrapper ul .languages {
+      margin-top: 15px; }
+    header nav .nav-wrapper ul li a {
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 18px; }
+  header nav .notifications > ul li a:hover {
+    background: transparent; }
+  header nav .notifications > ul li a img {
+    width: 17px;
+    height: 85px;
+    display: block;
+    margin: 0 5px; }
 
 .login-wrapper {
   min-height: calc(100vh - 85px); }
@@ -334,22 +347,20 @@ header nav {
     .login-wrapper #login-form form .input-field > label {
       color: rgba(246, 240, 255, 0.74);
       font-size: 14px; }
-  .login-wrapper #person-form form .input-field input {
-    width: 100%; }
-  .login-wrapper #person-form form .input-field > label {
-    color: rgba(246, 240, 255, 0.74);
-    font-size: 14px; }
-  @media only screen and (max-width: 992px) {
-    .login-wrapper #person-form form {
-      margin-bottom: 30px; } }
-  .login-wrapper #company-form form .input-field input {
-    width: 100%; }
-  .login-wrapper #company-form form .input-field > label {
-    color: rgba(246, 240, 255, 0.74);
-    font-size: 14px; }
-  @media only screen and (max-width: 992px) {
-    .login-wrapper #company-form form {
-      margin-bottom: 30px; } }
+  .login-wrapper #person-form form {
+    margin-bottom: 30px; }
+    .login-wrapper #person-form form .input-field input {
+      width: 100%; }
+    .login-wrapper #person-form form .input-field > label {
+      color: rgba(246, 240, 255, 0.74);
+      font-size: 14px; }
+  .login-wrapper #company-form form {
+    margin-bottom: 30px; }
+    .login-wrapper #company-form form .input-field input {
+      width: 100%; }
+    .login-wrapper #company-form form .input-field > label {
+      color: rgba(246, 240, 255, 0.74);
+      font-size: 14px; }
 
 #rules-modal {
   border-radius: 10px; }
@@ -357,7 +368,7 @@ header nav {
     padding: 45px; }
     #rules-modal .modal-content div {
       overflow: hidden;
-      height: 50vh;
+      height: 40vh;
       overflow-y: scroll;
       padding: 0 20px 0 0; }
       #rules-modal .modal-content div::-webkit-scrollbar {
@@ -454,5 +465,49 @@ header nav {
     position: relative; }
     .profile-edit form input:disabled {
       border-bottom: 1px solid #f6f0ff !important; }
-    .profile-edit form input::after {
-      content: "* * *"; }
+
+.aside-menu {
+  position: fixed;
+  height: calc(100vh - 85px);
+  top: 85px;
+  width: 200px;
+  z-index: 100; }
+  .aside-menu .aside-menu-btn {
+    top: calc((60px - 36px) / 2);
+    width: 36px;
+    height: 36px;
+    background: transparent url("../../assets/img/aside-menu.svg");
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 22px;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    z-index: 10; }
+    .aside-menu .aside-menu-btn.active {
+      -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+      left: 150px; }
+    .aside-menu .aside-menu-btn.active + ul {
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0); }
+  .aside-menu ul {
+    background: #331e51;
+    height: 100%;
+    padding-top: 60px;
+    position: absolute;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    width: 100%;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease; }
+    .aside-menu ul li a {
+      color: white;
+      display: block;
+      width: 100%;
+      padding: 10px 20px; }
