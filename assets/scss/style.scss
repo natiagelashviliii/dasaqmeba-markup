@@ -18,8 +18,15 @@ header{
 		border-bottom: 1px solid $lineColor;
 		height: 85px;
 		line-height: 85px;
+		.nav-wrapper{
+			float: right;
+		}
 		.logo{
 			@include logo;
+			@include mq(992px){
+				float: right;
+				margin-right: 15px;
+			}
 		}
 		ul{
 			.languages{
@@ -97,12 +104,48 @@ header{
 	#person-form{
 		form{
 			@include form-fields;
+			@include mq(992px){
+				margin-bottom: 30px;
+			}
 		}
 	}
 	#company-form{
 		form{
 			@include form-fields;
+			@include mq(992px){
+				margin-bottom: 30px;
+			}
 		}
+	}
+}
+
+#rules-modal{
+	border-radius: 10px;
+	.modal-content{
+		padding: 45px;
+		div{
+			overflow: hidden;
+			height: 50vh;
+			overflow-y: scroll;
+			padding: 0 20px 0 0;
+			&::-webkit-scrollbar {
+			    width: 8px;
+			}
+			 
+			&::-webkit-scrollbar-track {
+				border: 1px solid rgba(204, 194, 228, 0.2);
+    			border-radius: 10px;
+			}
+			 
+			&::-webkit-scrollbar-thumb {
+				background-color: rgba(79, 43, 165, 0.4);
+				outline: 1px solid rgba(79, 43, 165, 0.4);
+				border-radius: 10px;
+			}
+		}
+	}
+	.rules-agree-btn{
+		color: white;
 	}
 }
 
@@ -125,13 +168,25 @@ header{
 	.tape{
 		@include vh-100;
 		justify-content: center;
+		@include mq(992px){
+			min-height: unset;
+		}
 		img{
 			width: 80%;
+			@include mq(992px){
+				width: 50%;
+			    margin-left: 50%;
+			    transform: translateX(-50%);
+			    margin-top: -6%;
+			}
 		}
 	}
 	.contact{
 		@include vh-100;
 		justify-content: center;
+		@include mq(992px){
+			min-height: unset;
+		}
 		form{
 			.input-field{
 				textarea{
@@ -143,6 +198,11 @@ header{
 	.contact-info{
 		bottom: 15px;
 		left: 15px;
+		@include mq(992px){
+			position: unset;
+			text-align: center;
+			padding: 15px 0;
+		}
 		span{
 			color: $formColor;
 			margin-right: 15px;

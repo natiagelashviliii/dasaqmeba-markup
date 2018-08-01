@@ -3,6 +3,7 @@
 <head>
 	<title></title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
@@ -10,11 +11,11 @@
 
 <header class="navbar-fixed">
     <nav>
-        <div class="nav-wrapper">
-            <a href="index.html" class="logo circle">
-                <img src="" class="">
-            </a>
-            <ul class="right hide-on-med-and-down">
+        <a href="index.html" class="logo circle">
+            <img src="" class="">
+        </a>
+        <div class="nav-wrapper hide-on-med-and-down">
+            <ul class="right">
                 <li><a href="about.html">ჩვენ შესახებ</a></li>
                 <li><a href="contact.html">კონტაქტი</a></li>
                 <li><a href="login-registration.html">ავტორიზაცია/რეგისტრაცია</a></li>
@@ -27,6 +28,27 @@
                 </li>
             </ul>
         </div>
+
+        <!-- responsive navigation -->
+        <div role="navigation" class="hide-on-large-only">
+            <div id="responsive-nav">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="resp-menu">
+                    <li><a href="about.html">ჩვენ შესახებ</a></li>
+                    <li><a href="contact.html">კონტაქტი</a></li>
+                    <li><a href="login-registration.html">ავტორიზაცია/რეგისტრაცია</a></li>
+                    <li class="languages">
+                        <a href="">GEO</a>
+                        <a href="">EN</a>
+                        <a href="">RU</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- responsive navigation end -->
     </nav>
 </header>
 

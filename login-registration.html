@@ -3,6 +3,7 @@
 <head>
 	<title></title>
 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
@@ -10,11 +11,11 @@
 
 <header class="navbar-fixed">
     <nav>
-        <div class="nav-wrapper">
-            <a href="index.html" class="logo circle">
-                <img src="" class="">
-            </a>
-            <ul class="right hide-on-med-and-down">
+        <a href="index.html" class="logo circle">
+            <img src="" class="">
+        </a>
+        <div class="nav-wrapper hide-on-med-and-down">
+            <ul class="right">
                 <li><a href="about.html">ჩვენ შესახებ</a></li>
                 <li><a href="contact.html">კონტაქტი</a></li>
                 <li><a href="login-registration.html">ავტორიზაცია/რეგისტრაცია</a></li>
@@ -27,9 +28,29 @@
                 </li>
             </ul>
         </div>
+
+        <!-- responsive navigation -->
+        <div role="navigation" class="hide-on-large-only">
+            <div id="responsive-nav">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="resp-menu">
+                    <li><a href="about.html">ჩვენ შესახებ</a></li>
+                    <li><a href="contact.html">კონტაქტი</a></li>
+                    <li><a href="login-registration.html">ავტორიზაცია/რეგისტრაცია</a></li>
+                    <li class="languages">
+                        <a href="">GEO</a>
+                        <a href="">EN</a>
+                        <a href="">RU</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- responsive navigation end -->
     </nav>
 </header>
-
 
 <main class="bg-gradient">
 
@@ -37,22 +58,126 @@
 
 	<section class="login-wrapper">
 		<img class="login-reg-img" src="assets/img/bag.svg">
+
 		<div class="row">
-			<div class="col s12 p-0">
-				<ul class="tabs login-registration-tabs col s4 offset-s4">
-					<li class="tab col s5 offset-s1"><a class="active" href="#login-form" id="Login">შესვლა</a></li>
-					<li class="tab col s5"><a href="#registration-form" id="Registration">რეგისტრაცია</a></li>
+			<ul class="tabs login-registration-tabs col l4 offset-l4 m6 s12 offset-m3">
+				<li class="tab col s5 m6 "><a class="active" href="#login-form" id="Login">შესვლა</a></li>
+				<li class="tab col s5 m6"><a href="#registration-form" id="Registration">რეგისტრაცია</a></li>
+			</ul>
+		</div>
+		<div id="login-form">
+			<div class="row">
+				<form class="col xl6 offset-xl3 m8 offset-m2 s10 offset-s1">
+					<div class="row">
+				        <div class="input-field col s12 m12 l6">
+				        	<input id="Email" type="email">
+				        	<label for="Email">ელ.ფოსტა/პირადი ნომერი</label>
+				        </div>
+				        <div class="input-field col s12 m12 l6">
+				        	<input id="Password" type="password">
+				        	<label for="Password">პაროლი</label>
+				        </div>
+				        <div class="input-field col s12">
+				        	<button class="waves-effect waves-light btn right">დადასტურება</button>
+				        </div>
+				     </div>
+				</form>
+			</div>
+		</div>
+		<div id="registration-form">
+			<div class="row">
+				<ul class="tabs registration-types col l4 offset-l4 s6 offset-s3">
+					<li class="tab"><a class="active" href="#person-form">მომხმარებელი</a></li>
+					<li class="tab"><a href="#company-form">კომპანია</a></li>
 				</ul>
-				<div id="login-form" class="col s12">
-					<form class="col s4 offset-s4">
+			</div>
+			<div id="person-form">
+				<div class="row">
+					<form class="col l8 offset-l2 m8 offset-m2 s12">
 						<div class="row">
-					        <div class="input-field col s6">
-					        	<input id="Email" type="email">
-					        	<label for="Email">ელ.ფოსტა/პირადი ნომერი</label>
+					        <div class="input-field col l6 s12">
+					        	<input id="Name" type="text">
+					        	<label for="Name">სახელი/გვარი</label>
 					        </div>
-					        <div class="input-field col s6">
-					        	<input id="Password" type="password">
-					        	<label for="Password">პაროლი</label>
+					        <div class="input-field col l6 s12">
+					        	<input id="City" type="text">
+					        	<label for="City">ქალაქი</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="BirthDate" type="text">
+					        	<label for="BirthDate">დაბადების თარიღი</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="Address" type="text">
+					        	<label for="Address">მისამართი(გაქტობრივი)</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="UserID" type="text">
+					        	<label for="UserID">პირადი ნომერი</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="UserEmail" type="text">
+					        	<label for="UserEmail">ელ.ფოსტა</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="Phone" type="text">
+					        	<label for="Phone">საკონტაქტო ნომერი</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="UserPassword" type="text">
+					        	<label for="UserPassword">პაროლი</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="Gender" type="text">
+					        	<label for="Gender">სქესი</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="RepeatUserPassword" type="text">
+					        	<label for="RepeatUserPassword">გაიმერორეთ პაროლი</label>
+					        </div>
+					        <div class="input-field col s12">
+					        	<button data-target="rules-modal" id="rules-modal-btn" class="waves-effect waves-light btn right modal-trigger">საიტის წესები და პირობები</button>
+					        	<button class="waves-effect waves-light btn right">დადასტურება</button>
+					        </div>
+					     </div>
+					</form>
+				</div>
+			</div>
+			<div id="company-form">
+				<div class="row">
+					<form class="col l8 offset-l2 m8 offset-m2 s12">
+						<div class="row">
+					        <div class="input-field col l6 s12">
+					        	<input id="CompName" type="email">
+					        	<label for="CompName">ორგანიზაციის დასახელება</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="CompPhone" type="password">
+					        	<label for="CompPhone">საკონტაქტო ნომერი</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="CompID" type="password">
+					        	<label for="CompID">საიდენტიფიკაციო ნომერი</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="CompEmail" type="password">
+					        	<label for="CompEmail">ელ.ფოსტა</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="CompAddress" type="password">
+					        	<label for="CompAddress">იურიდიული მისამართი</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="CompPassword" type="password">
+					        	<label for="CompPassword">პაროლი</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="CompAdreess" type="password">
+					        	<label for="CompAdreess">ფაქტობრივი მისამართი</label>
+					        </div>
+					        <div class="input-field col l6 s12">
+					        	<input id="RepeatCompPassword" type="password">
+					        	<label for="RepeatCompPassword">გაიმეორეთ პაროლი</label>
 					        </div>
 					        <div class="input-field col s12">
 					        	<button class="waves-effect waves-light btn right">დადასტურება</button>
@@ -60,109 +185,51 @@
 					     </div>
 					</form>
 				</div>
-				<div id="registration-form" class="col s12">
-					<ul class="tabs registration-types col s4 offset-s4">
-						<li class="tab"><a class="active" href="#person-form">მომხმარებელი</a></li>
-						<li class="tab"><a href="#company-form">კომპანია</a></li>
-					</ul>
-					<div id="person-form" class="col s12">
-						<form class="col s6 offset-s3">
-							<div class="row">
-						        <div class="input-field col s6">
-						        	<input id="Name" type="text">
-						        	<label for="Name">სახელი/გვარი</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="City" type="text">
-						        	<label for="City">ქალაქი</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="BirthDate" type="text">
-						        	<label for="BirthDate">დაბადების თარიღი</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="Address" type="text">
-						        	<label for="Address">მისამართი(გაქტობრივი)</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="UserID" type="text">
-						        	<label for="UserID">პირადი ნომერი</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="UserEmail" type="text">
-						        	<label for="UserEmail">ელ.ფოსტა</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="Phone" type="text">
-						        	<label for="Phone">საკონტაქტო ნომერი</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="UserPassword" type="text">
-						        	<label for="UserPassword">პაროლი</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="Gender" type="text">
-						        	<label for="Gender">სქესი</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="RepeatUserPassword" type="text">
-						        	<label for="RepeatUserPassword">გაიმერორეთ პაროლი</label>
-						        </div>
-						        <div class="input-field col s12">
-						        	<button class="waves-effect waves-light btn right">დადასტურება</button>
-						        </div>
-						     </div>
-						</form>
-					</div>
-					<div id="company-form" class="col s12">
-						<form class="col s6 offset-s3">
-							<div class="row">
-						        <div class="input-field col s6">
-						        	<input id="CompName" type="email">
-						        	<label for="CompName">ორგანიზაციის დასახელება</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="CompPhone" type="password">
-						        	<label for="CompPhone">საკონტაქტო ნომერი</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="CompID" type="password">
-						        	<label for="CompID">საიდენტიფიკაციო ნომერი</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="CompEmail" type="password">
-						        	<label for="CompEmail">ელ.ფოსტა</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="CompAddress" type="password">
-						        	<label for="CompAddress">იურიდიული მისამართი</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="CompPassword" type="password">
-						        	<label for="CompPassword">პაროლი</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="CompAdreess" type="password">
-						        	<label for="CompAdreess">ფაქტობრივი მისამართი</label>
-						        </div>
-						        <div class="input-field col s6">
-						        	<input id="RepeatCompPassword" type="password">
-						        	<label for="RepeatCompPassword">გაიმეორეთ პაროლი</label>
-						        </div>
-						        <div class="input-field col s12">
-						        	<button class="waves-effect waves-light btn right">დადასტურება</button>
-						        </div>
-						     </div>
-						</form>
-					</div>
-				</div>
 			</div>
 		</div>
+
 	</section>
 
 	<!-- Content End -->
 
 </main>
+
+
+<!-- rules modal start -->
+
+<div id="rules-modal" class="modal">
+	<div class="modal-content">
+		<h4>წესები და პირობები</h4>
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec leo diam, interdum ac tempor non, gravida at ex. Aenean a imperdiet turpis. Quisque in mattis felis, eleifend molestie massa. Aenean id arcu dui. Aenean a lorem elit. Etiam commodo, nibh et pharetra ornare, libero ipsum elementum ipsum, in iaculis nulla nibh nec lacus. Sed convallis semper eros, ac condimentum enim sollicitudin pulvinar. Sed cursus justo ipsum, quis commodo tellus tincidunt at. Maecenas tristique at diam et ornare. Mauris felis mi, molestie eu fermentum eu, convallis eget ex. Morbi id metus sit amet leo semper tincidunt sed a diam. Aliquam iaculis nulla non quam mattis, sed scelerisque neque pulvinar.
+
+			Curabitur eleifend fringilla leo, in imperdiet arcu consequat non. Donec ut est in nunc luctus accumsan. In lorem arcu, consequat non lorem non, molestie commodo tortor. Sed porttitor purus id suscipit rutrum. Proin tempus felis ut elementum suscipit. Praesent consectetur tortor consequat justo ultricies, laoreet venenatis ipsum luctus. Fusce justo eros, porttitor eu finibus sed, pellentesque vel ante. Duis nec massa id lectus ornare pellentesque at vitae sem. Nulla vehicula enim eget felis pulvinar, id blandit augue aliquet. Integer vulputate massa sit amet enim varius ultrices. Donec sagittis, nisi nec ornare cursus, lectus purus faucibus risus, id egestas risus neque sed ex. Pellentesque nec neque a mi lacinia euismod sed ac tortor.
+
+			Pellentesque nulla tortor, iaculis quis tortor sed, pretium facilisis est. Vestibulum eleifend venenatis enim non bibendum. Aenean blandit imperdiet dui a malesuada. Cras eu libero nulla. Duis elementum massa eu commodo accumsan. Mauris nibh tortor, hendrerit nec cursus et, malesuada vel magna. Mauris imperdiet nisi eget nunc aliquet elementum. Phasellus id scelerisque dui, a luctus ligula. Suspendisse mollis aliquam lacus, in aliquam nulla condimentum ut. Mauris ac velit ac nulla sollicitudin porttitor nec at eros. Phasellus porttitor arcu sed suscipit euismod. Mauris molestie tempor nulla id mollis.
+
+			Nam sed egestas lorem. Sed facilisis elit massa, vitae dapibus leo ullamcorper in. Quisque vel metus turpis. Donec posuere lobortis tellus, nec mattis ex elementum in. Donec vel venenatis orci, et luctus nisi. Nulla posuere quam magna, sit amet aliquet purus venenatis vitae. Duis et aliquet diam. Fusce commodo odio vitae urna ullamcorper, at rutrum velit convallis. In ut condimentum turpis. Maecenas ultrices dolor a luctus finibus. Etiam posuere facilisis lacinia.
+
+			Nam dictum est quis mauris blandit placerat. Vivamus vitae luctus augue. Praesent ante lacus, tristique quis laoreet fermentum, gravida ut dui. Pellentesque at dui nisl. Vestibulum a dapibus tellus, id hendrerit dui. Suspendisse tempor diam eget sapien scelerisque, et blandit libero convallis. Nullam et lacus viverra, molestie eros at, lacinia ante. Sed sollicitudin metus sed erat viverra consequat. Praesent quis maximus nunc. Sed imperdiet sem sed purus fermentum tempus. Aliquam a erat efficitur, consectetur purus ornare, cursus quam. Donec venenatis dui est, quis varius ipsum pretium ut. Pellentesque non velit id ipsum rutrum consectetur vitae sed purus. Etiam viverra dapibus ante sed aliquam. Aenean sem sem, vulputate et erat a, dapibus hendrerit nisi.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec leo diam, interdum ac tempor non, gravida at ex. Aenean a imperdiet turpis. Quisque in mattis felis, eleifend molestie massa. Aenean id arcu dui. Aenean a lorem elit. Etiam commodo, nibh et pharetra ornare, libero ipsum elementum ipsum, in iaculis nulla nibh nec lacus. Sed convallis semper eros, ac condimentum enim sollicitudin pulvinar. Sed cursus justo ipsum, quis commodo tellus tincidunt at. Maecenas tristique at diam et ornare. Mauris felis mi, molestie eu fermentum eu, convallis eget ex. Morbi id metus sit amet leo semper tincidunt sed a diam. Aliquam iaculis nulla non quam mattis, sed scelerisque neque pulvinar.
+
+			Curabitur eleifend fringilla leo, in imperdiet arcu consequat non. Donec ut est in nunc luctus accumsan. In lorem arcu, consequat non lorem non, molestie commodo tortor. Sed porttitor purus id suscipit rutrum. Proin tempus felis ut elementum suscipit. Praesent consectetur tortor consequat justo ultricies, laoreet venenatis ipsum luctus. Fusce justo eros, porttitor eu finibus sed, pellentesque vel ante. Duis nec massa id lectus ornare pellentesque at vitae sem. Nulla vehicula enim eget felis pulvinar, id blandit augue aliquet. Integer vulputate massa sit amet enim varius ultrices. Donec sagittis, nisi nec ornare cursus, lectus purus faucibus risus, id egestas risus neque sed ex. Pellentesque nec neque a mi lacinia euismod sed ac tortor.
+
+			Pellentesque nulla tortor, iaculis quis tortor sed, pretium facilisis est. Vestibulum eleifend venenatis enim non bibendum. Aenean blandit imperdiet dui a malesuada. Cras eu libero nulla. Duis elementum massa eu commodo accumsan. Mauris nibh tortor, hendrerit nec cursus et, malesuada vel magna. Mauris imperdiet nisi eget nunc aliquet elementum. Phasellus id scelerisque dui, a luctus ligula. Suspendisse mollis aliquam lacus, in aliquam nulla condimentum ut. Mauris ac velit ac nulla sollicitudin porttitor nec at eros. Phasellus porttitor arcu sed suscipit euismod. Mauris molestie tempor nulla id mollis.
+
+			Nam sed egestas lorem. Sed facilisis elit massa, vitae dapibus leo ullamcorper in. Quisque vel metus turpis. Donec posuere lobortis tellus, nec mattis ex elementum in. Donec vel venenatis orci, et luctus nisi. Nulla posuere quam magna, sit amet aliquet purus venenatis vitae. Duis et aliquet diam. Fusce commodo odio vitae urna ullamcorper, at rutrum velit convallis. In ut condimentum turpis. Maecenas ultrices dolor a luctus finibus. Etiam posuere facilisis lacinia.
+
+			Nam dictum est quis mauris blandit placerat. Vivamus vitae luctus augue. Praesent ante lacus, tristique quis laoreet fermentum, gravida ut dui. Pellentesque at dui nisl. Vestibulum a dapibus tellus, id hendrerit dui. Suspendisse tempor diam eget sapien scelerisque, et blandit libero convallis. Nullam et lacus viverra, molestie eros at, lacinia ante. Sed sollicitudin metus sed erat viverra consequat. Praesent quis maximus nunc. Sed imperdiet sem sed purus fermentum tempus. Aliquam a erat efficitur, consectetur purus ornare, cursus quam. Donec venenatis dui est, quis varius ipsum pretium ut. Pellentesque non velit id ipsum rutrum consectetur vitae sed purus. Etiam viverra dapibus ante sed aliquam. Aenean sem sem, vulputate et erat a, dapibus hendrerit nisi.
+			<p>
+				<a href="#!" class="modal-close waves-effect waves-green btn-flat btn rules-agree-btn right">ვეთანხმები</a>
+			</p>
+		</div>
+	</div>
+</div>
+
+<!-- rules modal end -->
+
+
+
 
 
 
