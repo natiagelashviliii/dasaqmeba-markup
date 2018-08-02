@@ -309,3 +309,71 @@ header{
 		}
 	}
 }
+
+.notifications{
+	ul{
+		li{
+			position: relative;
+		}
+	}
+	.header-notifications{
+		position: absolute;
+		width: 300px;
+		background: $notificationColor;
+		left: -15px;
+		top: 70px;
+		display: inline-flex;
+		border-radius: 30px;
+		ul{
+			padding: 35px 0 15px 0;
+			display: inline-block;
+			li{
+				line-height: 13px;
+			    padding: 10px 12px;
+			    background: rgba(124, 101, 170, 0.2);
+			    margin: 5px 0;
+			    &>a{
+			    	display: flex;
+				    align-items: center;
+				    justify-content: center;
+				    padding: 0;
+			    }
+			    &:last-child{
+			    	float: right;
+			    	background: transparent;
+			    	padding: 0;
+			    	a{
+						margin-right: 10px;
+						background: #7c65aa;
+						border-radius: 20px;
+						font-size: 13px;
+						height: 21px;
+						line-height: 25px;
+						padding: 0 10px;
+			    	}
+			    }
+			    p{
+			   		height: 25px;
+   					overflow: hidden;
+   					color: rgba(0, 0, 0, 0.5);
+			    }
+			    div{
+			    	height: 30px;
+				    display: -webkit-box;
+				    display: -ms-flexbox;
+				    display: flex;
+				    -webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				    justify-content: center;
+				    margin-right: 15px;
+			    	img{
+			    		width: 30px;
+			    		height: 30px;
+			    		border-radius: 50%;
+			    	}
+			    }
+			}
+		}
+	}
+}
+
