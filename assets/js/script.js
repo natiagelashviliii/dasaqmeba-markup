@@ -33,6 +33,14 @@ $(document).ready(function(){
 			$(this).addClass('active');
 			$('main').addClass('main-inside');
 		}
-	})
+	});
+
+	//menu hide on body click
+	$('body').on('click', 'main', function(e) {
+		if ($('main').hasClass('main-inside')) {
+			$('.aside-menu-btn').removeClass('active');
+			$('main').removeClass('main-inside');
+		}
+	});
 
 });
