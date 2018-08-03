@@ -296,6 +296,9 @@ header nav {
     height: 85px;
     display: block;
     margin: 0 5px; }
+  header nav #responsive-nav {
+    /*float: left;*/
+    z-index: -1; }
 
 .login-wrapper {
   min-height: calc(100vh - 85px); }
@@ -514,6 +517,14 @@ header nav {
 
 .notifications ul li {
   position: relative; }
+  .notifications ul li.dropdown-notification:hover .header-notifications {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
+  .notifications ul li.alarm-notification:hover .header-notifications {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
 
 .notifications .header-notifications {
   position: absolute;
@@ -524,10 +535,24 @@ header nav {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  border-radius: 30px; }
+  border-radius: 30px;
+  display: none; }
   .notifications .header-notifications ul {
     padding: 35px 0 15px 0;
-    display: inline-block; }
+    display: inline-block;
+    position: relative; }
+    .notifications .header-notifications ul:after {
+      content: '';
+      border-style: solid;
+      border-width: 0 15px 13px 15px;
+      border-color: transparent transparent #e5def9 transparent;
+      position: absolute;
+      top: -13px;
+      left: 30px; }
+      @media only screen and (max-width: 992px) {
+        .notifications .header-notifications ul:after {
+          left: unset;
+          right: 145px; } }
     .notifications .header-notifications ul li {
       line-height: 13px;
       padding: 10px 12px;
@@ -554,7 +579,7 @@ header nav {
           border-radius: 20px;
           font-size: 13px;
           height: 21px;
-          line-height: 25px;
+          line-height: 22px;
           padding: 0 10px; }
       .notifications .header-notifications ul li p {
         height: 25px;
@@ -573,3 +598,20 @@ header nav {
           width: 30px;
           height: 30px;
           border-radius: 50%; }
+  @media only screen and (max-width: 992px) {
+    .notifications .header-notifications {
+      left: unset;
+      right: -100%;
+      -webkit-transform: translateX(25%);
+      -ms-transform: translateX(25%);
+      transform: translateX(25%); } }
+
+@media only screen and (max-width: 992px) {
+  .notifications .alarm-notification .header-notifications {
+    -webkit-transform: translateX(6%);
+    -ms-transform: translateX(6%);
+    transform: translateX(6%); } }
+
+@media only screen and (max-width: 992px) {
+  .notifications .alarm-notification .header-notifications ul:after {
+    right: 88px; } }
