@@ -631,8 +631,8 @@ header nav {
           width: 30px; }
   .statements .each-block {
     background-color: #d1ccef;
-    height: 200px;
     border-radius: 30px;
+    height: 230px;
     display: grid;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -645,11 +645,15 @@ header nav {
     .statements .each-block > div {
       overflow: hidden;
       padding: 0 10px; }
-    .statements .each-block .header,
+    .statements .each-block .header {
+      height: 20px;
+      color: rgba(51, 30, 81, 0.9); }
     .statements .each-block .title {
-      height: 20px; }
+      height: 20px;
+      color: rgba(0, 0, 0, 0.5); }
     .statements .each-block .descr {
-      height: 40px; }
+      height: 40px;
+      color: rgba(0, 0, 0, 0.5); }
     .statements .each-block button.full {
       text-transform: unset;
       padding: 0 15px; }
@@ -667,3 +671,26 @@ header nav {
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
         transform: scale(1.1); }
+
+.offers {
+  padding-top: 70px; }
+  .offers > div {
+    padding: 0 70px !important; }
+    @media only screen and (max-width: 1200px) {
+      .offers > div {
+        padding: 0 30px !important; } }
+  .offers .each-block {
+    height: 500px;
+    margin-bottom: 50px;
+    background-color: #d1ccef;
+    border-radius: 30px; }
+    .offers .each-block .header {
+      padding: 20px 0;
+      color: rgba(51, 30, 81, 0.9); }
+    .offers .each-block .title {
+      height: 45px;
+      overflow: hidden;
+      color: rgba(0, 0, 0, 0.5); }
+    .offers .each-block .descr {
+      font-size: 30px;
+      color: rgba(51, 30, 81, 0.9); }

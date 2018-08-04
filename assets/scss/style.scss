@@ -445,8 +445,8 @@ header{
 	}
 	.each-block{
 		background-color: $statementBg;
-		height: 200px;
 		border-radius: 30px;
+		height: 230px;
 		display: grid;
 		align-items: center;
 		justify-content: center;
@@ -456,12 +456,17 @@ header{
 			overflow: hidden;
 			padding: 0 10px;
 		}
-		.header,
+		.header{
+			height: 20px;
+			color: rgba(51, 30, 81, 0.9);
+		}
 		.title{
 			height: 20px;
+			color: $menuTextCol;
 		}
 		.descr{
 			height: 40px;
+			color: $menuTextCol;
 		}
 		button{
 			&.full{
@@ -480,6 +485,35 @@ header{
 					transform: scale(1.1);
 				}
 			}
+		}
+	}
+}
+
+.offers{
+	padding-top: 70px;
+	&>div{
+		padding: 0 70px!important;
+		@include mq(1200px){
+			padding: 0 30px!important;
+		}
+	}
+	.each-block{
+		height: 500px;
+		margin-bottom: 50px;
+		background-color: $statementBg;
+		border-radius: 30px;
+		.header{
+			padding: 20px 0;
+			color: rgba(51, 30, 81, 0.9);
+		}
+		.title{
+			height: 45px;
+			overflow: hidden;
+			color: $menuTextCol;
+		}
+		.descr{
+			font-size: 30px;
+			color: rgba(51, 30, 81, 0.9);
 		}
 	}
 }
