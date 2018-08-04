@@ -5,12 +5,11 @@
 main{
 	@include vh-100;
 	position: relative;
-	transition: margin-left 0.5s ease;
 	&.bg-gradient{
 		background: linear-gradient(to right, #6369d7, #9767cb);
 	}
-	&.main-inside{
-		margin-left: 150px;
+	&.bg-light{
+		background: $mainBg;
 	}
 }
 header{
@@ -425,3 +424,62 @@ header{
 	}
 }
 
+
+
+.statements{
+	padding-top: 70px;
+	&>div{
+		padding: 0 30px!important;
+		&:first-child{
+			.each-block{
+				padding: 0!important;
+				a{
+					background-color: none;
+					border: none;
+					img{
+						width: 30px;
+					}
+				}
+			}
+		}
+	}
+	.each-block{
+		background-color: $statementBg;
+		height: 200px;
+		border-radius: 30px;
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		padding: 20px 0 0 0;
+		margin-bottom: 85px;
+		&>div{
+			overflow: hidden;
+			padding: 0 10px;
+		}
+		.header,
+		.title{
+			height: 20px;
+		}
+		.descr{
+			height: 40px;
+		}
+		button{
+			&.full{
+			    text-transform: unset;
+	    		padding: 0 15px;
+			}
+			&.close{				
+				background: none;
+				border: none;
+				top: 15px;
+				right: 15px;
+				width: 13px;
+				transition: .3s ease;
+				cursor: pointer;
+				&:hover{
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}

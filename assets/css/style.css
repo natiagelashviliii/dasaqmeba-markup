@@ -13,6 +13,11 @@
 .row {
   margin-bottom: 0px; }
 
+.container {
+  max-width: 1200px;
+  width: 96%;
+  padding: 0 20px; }
+
 input:not([type]),
 input[type=text]:not(.browser-default),
 input[type=password]:not(.browser-default),
@@ -250,17 +255,14 @@ label {
 
 main {
   min-height: calc(100vh - 85px);
-  position: relative;
-  -webkit-transition: margin-left 0.5s ease;
-  -o-transition: margin-left 0.5s ease;
-  transition: margin-left 0.5s ease; }
+  position: relative; }
   main.bg-gradient {
     background: -webkit-gradient(linear, left top, right top, from(#6369d7), to(#9767cb));
     background: -webkit-linear-gradient(left, #6369d7, #9767cb);
     background: -o-linear-gradient(left, #6369d7, #9767cb);
     background: linear-gradient(to right, #6369d7, #9767cb); }
-  main.main-inside {
-    margin-left: 150px; }
+  main.bg-light {
+    background: #f8f5ff; }
 
 header.navbar-fixed {
   height: 85px; }
@@ -615,3 +617,53 @@ header nav {
 @media only screen and (max-width: 992px) {
   .notifications .alarm-notification .header-notifications ul:after {
     right: 88px; } }
+
+.statements {
+  padding-top: 70px; }
+  .statements > div {
+    padding: 0 30px !important; }
+    .statements > div:first-child .each-block {
+      padding: 0 !important; }
+      .statements > div:first-child .each-block a {
+        background-color: none;
+        border: none; }
+        .statements > div:first-child .each-block a img {
+          width: 30px; }
+  .statements .each-block {
+    background-color: #d1ccef;
+    height: 200px;
+    border-radius: 30px;
+    display: grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 20px 0 0 0;
+    margin-bottom: 85px; }
+    .statements .each-block > div {
+      overflow: hidden;
+      padding: 0 10px; }
+    .statements .each-block .header,
+    .statements .each-block .title {
+      height: 20px; }
+    .statements .each-block .descr {
+      height: 40px; }
+    .statements .each-block button.full {
+      text-transform: unset;
+      padding: 0 15px; }
+    .statements .each-block button.close {
+      background: none;
+      border: none;
+      top: 15px;
+      right: 15px;
+      width: 13px;
+      -webkit-transition: .3s ease;
+      -o-transition: .3s ease;
+      transition: .3s ease;
+      cursor: pointer; }
+      .statements .each-block button.close:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1); }

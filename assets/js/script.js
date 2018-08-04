@@ -28,10 +28,8 @@ $(document).ready(function(){
 		e.preventDefault();
 		if ($(this).hasClass('active')) {
 			$(this).removeClass('active');
-			$('main').removeClass('main-inside');
 		} else {
 			$(this).addClass('active');
-			$('main').addClass('main-inside');
 		}
 	});
 

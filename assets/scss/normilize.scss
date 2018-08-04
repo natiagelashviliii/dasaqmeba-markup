@@ -12,9 +12,13 @@
     font-family: regular;
     src: url(../fonts/bpgNinoMtavruliNormal.woff);
 }
-
 .row{
 	margin-bottom: 0px;
+}
+.container {
+    max-width: 1200px;
+    width: 96%;
+    padding: 0 20px;
 }
 input:not([type]), 
 input[type=text]:not(.browser-default), 
@@ -125,7 +129,6 @@ label{
 	color: $formColor!important;
 	font-size: 13px!important;
 }
-
 #responsive-nav{
 	display: block;
 	position: relative;
