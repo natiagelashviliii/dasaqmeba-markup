@@ -308,6 +308,9 @@ header{
 				display: block;
 			    width: 100%;
 			    padding: 10px 20px;
+			    &.active{
+			    	color: rgb(124, 101, 170);
+			    }
 			}
 		}
 	}

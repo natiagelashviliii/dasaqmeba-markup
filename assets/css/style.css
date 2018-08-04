@@ -516,6 +516,8 @@ header nav {
       display: block;
       width: 100%;
       padding: 10px 20px; }
+      .aside-menu ul li a.active {
+        color: #7c65aa; }
 
 .notifications ul li {
   position: relative; }
