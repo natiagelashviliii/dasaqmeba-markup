@@ -316,6 +316,57 @@ header{
 	}
 }
 
+
+.notifications-menu{
+	position: fixed;
+	height: calc(100vh - 85px);
+	top: 85px;
+	right: 0px;
+	width: 200px;
+	z-index: 100;
+	.notifications-menu-btn{
+		top: calc((60px - 36px) / 2 );
+	    width: 36px;
+	    height: 36px;
+	    background: transparent url('../../assets/img/aside-menu.svg');
+	    transform: rotate(-180deg);
+	    border: none;
+	    cursor: pointer;
+	    position: absolute;
+	    right: 22px;
+	    transition: .5s ease;
+	    z-index: 10;
+	    &.active{
+	    	transform: rotate(0deg);
+	    	right: 150px;
+	    }
+	    &.active + ul{
+	    	transform: translateX(0);
+	    }
+	}
+	ul{
+		background: #331e51;
+		height: 100%;
+		padding-top: 60px;
+		position: absolute;
+		transform: translateX(100%);
+		width: 100%;
+		transition: 0.5s ease;
+		li{
+			a{
+				color: white;
+				display: block;
+			    width: 100%;
+			    padding: 10px 20px;
+			    &.active{
+			    	color: rgb(124, 101, 170);
+			    }
+			}
+		}
+	}
+}
+
+
 .notifications{
 	ul{
 		li{

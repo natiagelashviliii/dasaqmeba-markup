@@ -519,6 +519,58 @@ header nav {
       .aside-menu ul li a.active {
         color: #7c65aa; }
 
+.notifications-menu {
+  position: fixed;
+  height: calc(100vh - 85px);
+  top: 85px;
+  right: 0px;
+  width: 200px;
+  z-index: 100; }
+  .notifications-menu .notifications-menu-btn {
+    top: calc((60px - 36px) / 2);
+    width: 36px;
+    height: 36px;
+    background: transparent url("../../assets/img/aside-menu.svg");
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 22px;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    z-index: 10; }
+    .notifications-menu .notifications-menu-btn.active {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+      right: 150px; }
+    .notifications-menu .notifications-menu-btn.active + ul {
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0); }
+  .notifications-menu ul {
+    background: #331e51;
+    height: 100%;
+    padding-top: 60px;
+    position: absolute;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    width: 100%;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease; }
+    .notifications-menu ul li a {
+      color: white;
+      display: block;
+      width: 100%;
+      padding: 10px 20px; }
+      .notifications-menu ul li a.active {
+        color: #7c65aa; }
+
 .notifications ul li {
   position: relative; }
   .notifications ul li.dropdown-notification:hover .header-notifications {

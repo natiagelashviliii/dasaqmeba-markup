@@ -24,7 +24,7 @@ $(document).ready(function(){
     });
 
 	//aside menu animation
-	$('.aside-menu-btn').on('click', function(e) {
+	$('.aside-menu-btn, .notifications-menu-btn').on('click', function(e) {
 		e.preventDefault();
 		if ($(this).hasClass('active')) {
 			$(this).removeClass('active');
